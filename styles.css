@@ -1,0 +1,237 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(4,98,141);
+    background: radial-gradient(circle, rgba(4,98,141,0.9583771094847261) 0%, rgba(98,23,185,0.9611860982487711) 5%, rgba(4,116,141,0.9583771094847261) 16%, rgba(109,57,169,0.963995087012816) 32%, rgba(107,14,189,0.9696130645409059) 48%, rgba(9,138,170,0.9471411544285464) 66%, rgba(113,55,170,0.9499501431925913) 82%, rgba(4,123,141,0.9527591319566362) 88%, rgba(120,73,177,0.9527591319566362) 100%);
+}
+
+#alarmApp {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    place-content: normal;
+    border-radius: 10px;
+    box-shadow: #3e343457 0px 0px 2px 4px;
+    background: rgb(119, 202, 241);
+    /* background: linear-gradient(90deg, rgba(0, 158, 231, 0.958) 0%, rgba(107, 0, 228, 0.961) 5%, rgba(4,116,141,0.9583771094847261) 16%, rgba(112, 3, 235, 0.964) 32%, rgba(119, 3, 221, 0.97) 48%, rgba(4, 169, 210, 0.947) 66%, rgba(113,55,170,0.9499501431925913) 82%, rgba(2, 179, 206, 0.953) 95%, rgba(101, 2, 221, 0.953) 100%); */
+}
+
+#headApp {
+    display: flex;
+    flex-direction: row;
+    height: 12.5%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(208, 185, 185);
+    justify-content: space-between;
+    margin-top: 0.25%;
+}
+
+#titleCnt {
+    align-self: center;
+    width: 10%;
+    margin-left: 2.25%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #ccc;
+    box-shadow: gainsboro 0px 1px 56px 0px, gainsboro 0px 0px 0px 1px;
+}
+
+#title {
+    margin: 0;
+    font-family: system-ui;
+    color: rgb(105, 78, 78);
+    font-weight: 900;
+}
+
+#addCnt {
+    height: -webkit-fill-available;
+    width: 30%;
+    margin-left: 2.25%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#crntTime {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    background-color: #7cc5f085;
+    padding: 3% 7.5%;
+    border-radius: 5px;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#add {
+    height: 70%;
+    max-height: fit-content;
+    cursor: pointer;
+}
+
+form {
+    width: 70%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    box-shadow: rgb(224 221 221 / 15%) 10px 10px 10px, rgb(221 215 215 / 15%) 0px 0px 0px, rgb(196 194 194 / 15%) 10px 5px 10px, rgb(243 258 254 / 15%) 0px 0px 0px, rgba(0, 0, 0, 0.09) 0px 5px 0px;
+    border: 4px solid rgb(177 177 177 / 31%);
+    border-radius: 15px;
+    padding: 4% 2%;
+}
+
+#inputCnt {
+    display: flex;
+}
+
+#hourInput, #minInput, #secInput {
+    width: 10%;
+    text-align: center;
+    caret-color: rgb(211, 212, 212);
+    margin-right: 1%;
+    outline: none;    
+    border: none;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+#setAlarm {
+    width: 30%;
+    cursor: pointer;
+    border: none;
+    border-radius: 7.5px;
+    color: white;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(231, 204, 169);
+    padding: 2% 1.5%;
+    box-shadow: gainsboro 0px 2px 4px, rgb(205, 203, 203) 0px 7px 13px -3px, goldenrod 0px -3px 0px inset;
+}
+
+#setAlarm:active {
+    box-shadow: gainsboro 0px 2px 4px, rgb(205, 203, 203) 0px 7px 13px -3px, goldenrod 0px -2px 0px inset;
+}
+
+#amOrPmCnt  {
+    background-color: rgb(230, 182, 182);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+    cursor: default;
+    width: 25%;
+    border: none;
+
+    font-family: monospace;
+}
+
+.colon {
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+}
+
+#AMorPMCnt {
+    display: flex;
+    justify-content: center;
+    border: none;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+
+#selectAmOrPm {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%; 
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    flex-direction: column;
+    width: 98.5%;
+    text-align-last: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#AMCnt:hover, #PMCnt:hover{
+    width: 100%;
+    background-color: rgb(242, 197, 197);
+}
+
+
+
+
+/*-- ALARM LIST --*/
+
+#alarmCnt {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.alarmList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin: 4% 0px;
+    padding: 2% 1%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.alarmlistCnt {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    width: 100;
+    color: white;
+}
+
+.imgIcon {
+    height: 15px;
+    width: 15px;
+    margin-right: 10%;
+}
+
+.deleteBtn {
+    background-color: rgb(237, 180, 180);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 700;
+    border: 1px solid rgb(157, 155, 155);
+    margin-right: 2.5%;
+    box-shadow: rgba(65, 44, 44, 0.16) 0px 1px 1px, rgba(81, 81, 81, 0.23) 0px 1px 3px;
+}
+
+.deleteBtn:active {
+    border-color: wheat;
+    /* box-shadow: rgba(142, 141, 141, 0.02) 0px 1px 3px 0px, rgba(118, 131, 155, 0.15) 0px 0px 0px 1px; */
+    box-shadow: rgb(177, 176, 176) 0px 1px 2px 0px;
+}

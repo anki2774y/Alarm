@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Alarm </title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="alarmApp">
+            <!-- Navigation -->
+            <div id="headApp">
+                <div id="titleCnt">
+                    <h3 id="title"> Alarm</h3>
+                </div>
+                <div id="addCnt">                    
+                    <p id="crntTime"></p>
+                    <img id="add" src="./assets/plus.png" alt="Add" data-tooltip="Add" />
+                </div>
+            </div>
+            <!-- Form to set alarm -->
+            <form>
+                <div id="inputCnt">
+                    <input id="hourInput" autocomplete="off" placeholder="Hr" />
+                    <div class="colon">
+                        <span> &#58; </span>
+                    </div>                    
+                    <input id="minInput" autocomplete="off" placeholder="Min" />
+                    <div class="colon">
+                        <span> &#58; </span>
+                    </div>  
+                    <input id="secInput" autocomplete="off" placeholder="Sec" />
+                    <div id="AMorPMCnt" style="position: relative;">
+                        <div id="amOrPmCnt">
+                            <span id="amOrPm"> AM/PM </span>
+                        </div>
+                        <div id="selectAmOrPm">
+                            <div id="AMCnt">
+                                <span id="AM"> AM </span>
+                            </div>
+                            <div id="PMCnt">
+                                <span id="PM"> PM </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <button id="setAlarm" type="submit"> Set Alarm </button>
+            </form>
+            <!-- List of alarm -->
+            <ul id="alarmCnt">
+            </ul>
+        </div>
+    </body>
+    <script src="./index.js" ></script>
+</html>
